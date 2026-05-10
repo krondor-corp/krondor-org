@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Light mode - Clean and minimal */
+  :root {
+    --background: 0 0% 98%; /* Near white */
+    --foreground: 0 0% 15%; /* Near black */
+
+    --muted: 0 0% 94%; /* Light gray */
+    --muted-foreground: 0 0% 45%; /* Medium gray */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 0 0% 15%; /* Near black */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 0 0% 15%; /* Near black */
+
+    --border: 0 0% 88%; /* Light border */
+    --input: 0 0% 88%; /* Light input */
+
+    --primary: 0 0% 15%; /* Near black */
+    --primary-foreground: 0 0% 98%; /* Near white */
+
+    --secondary: 0 0% 94%; /* Light gray */
+    --secondary-foreground: 0 0% 35%; /* Dark gray */
+
+    --accent: 0 0% 94%; /* Light gray */
+    --accent-foreground: 0 0% 15%; /* Near black */
+
+    --destructive: 0 65% 50%; /* Muted red */
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 0 0% 15%; /* Near black */
+
+    --success: 145 50% 40%; /* Muted green */
+    --success-foreground: 0 0% 98%;
+
+    --warning: 38 70% 50%; /* Muted orange */
+    --warning-foreground: 0 0% 98%;
+  }
+
+  /* Dark mode - Primary experience */
+  .dark {
+    --background: 0 0% 7%; /* Very dark */
+    --foreground: 0 0% 87%; /* Light gray */
+
+    --muted: 0 0% 12%; /* Dark gray */
+    --muted-foreground: 0 0% 55%; /* Medium gray */
+
+    --card: 0 0% 10%; /* Slightly lighter */
+    --card-foreground: 0 0% 87%; /* Light gray */
+
+    --popover: 0 0% 10%; /* Slightly lighter */
+    --popover-foreground: 0 0% 87%; /* Light gray */
+
+    --border: 0 0% 18%; /* Subtle border */
+    --input: 0 0% 18%; /* Subtle input */
+
+    --primary: 0 0% 87%; /* Light gray */
+    --primary-foreground: 0 0% 7%; /* Very dark */
+
+    --secondary: 0 0% 15%; /* Dark gray */
+    --secondary-foreground: 0 0% 70%; /* Light gray */
+
+    --accent: 0 0% 15%; /* Dark gray */
+    --accent-foreground: 0 0% 87%; /* Light gray */
+
+    --destructive: 0 55% 45%; /* Muted red */
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 0 0% 87%; /* Light gray */
+
+    --success: 145 45% 40%; /* Muted green */
+    --success-foreground: 0 0% 98%;
+
+    --warning: 38 60% 50%; /* Muted orange */
+    --warning-foreground: 0 0% 98%;
+  }
+
+  html,
+  body {
+    @apply w-full h-full bg-background text-foreground overflow-x-hidden;
+    touch-action: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-sans {
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  }
+  .font-mono {
+    font-family: var(--font-mono), "JetBrains Mono", ui-monospace, monospace;
+  }
+}
+
+@layer components {
+  /* Simple, reusable components */
+  .card {
+    @apply bg-card border border-border rounded-lg p-6;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 bg-background border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-input;
+  }
+
+  .text-muted {
+    @apply text-muted-foreground;
+  }
+}

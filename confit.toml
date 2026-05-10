@@ -1,0 +1,11 @@
+[providers.op]
+cmd = "op read {uri}"
+
+[vars]
+stage = "development"
+project = "krondor-sites"
+vault_slug = "{vars.project}-{vars.stage}"
+
+[app]
+next_public_quotient_api_key = "op://{vars.vault_slug}/QUOTIENT_API_KEY/public"
+quotient_private_api_key = "secret://op://{vars.vault_slug}/QUOTIENT_API_KEY/private"
