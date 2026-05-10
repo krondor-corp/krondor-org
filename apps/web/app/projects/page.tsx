@@ -37,7 +37,7 @@ const projects: Project[] = [
     description:
       "Monorepo template for building and deploying web services to a single server. Batteries-included stack with FastAPI, Axum, and React service templates, wired together by confit config, Terraform provisioning, Ansible bootstrap, and Kamal zero-downtime deploys.",
     href: "https://github.com/krondor-corp/generic",
-    docs: "https://generic.krondor.org/wiki/",
+    docs: "https://generic.krondor.org",
     language: "HCL / Python / Rust",
   },
   {
@@ -52,7 +52,7 @@ const projects: Project[] = [
     description:
       "One config file to rule them all. Define values in confit.toml with interpolation, shell evaluation, and pluggable providers that map URI schemes to any secrets manager or infra tool. Inject env vars, load SSH keys, mask secrets — no more sourcing dotfiles.",
     href: "https://github.com/krondor-corp/confit",
-    docs: "https://krondor-corp.github.io/confit",
+    docs: "confit.krondor.org",
     language: "Rust",
   },
 ];
