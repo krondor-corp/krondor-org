@@ -52,7 +52,7 @@ const projects: Project[] = [
     description:
       "One config file to rule them all. Define values in confit.toml with interpolation, shell evaluation, and pluggable providers that map URI schemes to any secrets manager or infra tool. Inject env vars, load SSH keys, mask secrets — no more sourcing dotfiles.",
     href: "https://github.com/krondor-corp/confit",
-    docs: "confit.krondor.org",
+    docs: "https://confit.krondor.org",
     language: "Rust",
   },
 ];
