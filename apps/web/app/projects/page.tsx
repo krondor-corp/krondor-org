@@ -41,6 +41,13 @@ const projects: Project[] = [
     language: "HCL / Python / Rust",
   },
   {
+    name: "geney",
+    description:
+      "Local-first desktop app for designing DNA cloning workflows. Content-addressed, deterministic operations build verifiable Merkle DAGs of molecular constructs, with A* pathfinding to optimize assembly strategies, restriction enzyme simulation, and GenBank/SnapGene import — fully offline, no cloud.",
+    demo: "https://geney.ai",
+    language: "Python / Rust",
+  },
+  {
     name: "alexplain",
     description:
       "Personal music site for streaming releases and sharing chord charts. Built with Next.js and backed by JAX object storage.",
